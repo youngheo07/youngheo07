@@ -2,216 +2,375 @@
 <html lang="vi">
 
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Quá đã</title>
-    <link rel="stylesheet" href="./access/css/base.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Quá đã</title>
+  <link rel="stylesheet" href="./access/css/base.css">
 </head>
 
 <body>
-    <!-- Header -->
-    <header class="header">
-        <div class="container header--menu">
-            <h1 class="title">Em có biết rằng</h1>
-        </div>
-    </header>
-    <!-- End Header -->
-
-    <div class="body">
-        <div class="container">
-            <div class="body">
-                <div class="container body--menu">
-                    <button class="button--item" onclick="showBoxes()">Nhấn ở đây nè</button>
-                </div>
-            </div>
-        </div>
-        <div class="box" style="left: 10px;">
-            <div class="box-header">
-              <span>Anh heo</span>
-              <button onclick="hideBox(this)">-</button>
-            </div>
-            <div class="box-content">
-              Đẹp trai
-            </div>
-        </div>
-        <div class="box" style="top: 10px;">
-            <div class="box-header">
-              <span>Anh heo</span>
-              <button onclick="hideBox(this)">-</button>
-            </div>
-            <div class="box-content">
-              Đẹp trai
-            </div>
-        </div>
-        <div class="box" style="left: 30px;">
-            <div class="box-header">
-              <span>Anh heo</span>
-              <button onclick="hideBox(this)">-</button>
-            </div>
-            <div class="box-content">
-              Đẹp trai
-            </div>
-        </div>
-        <div class="box" style="right: 30px;">
-            <div class="box-header">
-              <span>Anh heo</span>
-              <button onclick="hideBox(this)">-</button>
-            </div>
-            <div class="box-content">
-              Đẹp trai
-            </div>
-        </div>
-        <div class="box" style="left: 42px; bottom: 30px;">
-            <div class="box-header">
-              <span>Anh heo</span>
-              <button onclick="hideBox(this)">-</button>
-            </div>
-            <div class="box-content">
-              Đẹp trai
-            </div>
-        </div>
-        <div class="box" style="left: 40px; top: 120px;">
-            <div class="box-header">
-              <span>Anh heo</span>
-              <button onclick="hideBox(this)">-</button>
-            </div>
-            <div class="box-content">
-              Đẹp trai
-            </div>
-        </div>
-        <div class="box" style="right: 40px; top: 90px;">
-            <div class="box-header">
-              <span>Anh heo</span>
-              <button onclick="hideBox(this)">-</button>
-            </div>
-            <div class="box-content">
-              Đẹp trai
-            </div>
-        </div>
-        <div class="box" style="right: 40px; bottom: 90px;">
-            <div class="box-header">
-              <span>Anh heo</span>
-              <button onclick="hideBox(this)">-</button>
-            </div>
-            <div class="box-content">
-              Đẹp trai
-            </div>
-        </div>
-        <div class="box" style="left: 35px; top: 300px;">
-            <div class="box-header">
-              <span>Anh heo</span>
-              <button onclick="hideBox(this)">-</button>
-            </div>
-            <div class="box-content">
-              Đẹp trai
-            </div>
-        </div>
-        <div class="box" style="bottom: 300px;">
-            <div class="box-header">
-              <span>Anh heo</span>
-              <button onclick="hideBox(this)">-</button>
-            </div>
-            <div class="box-content">
-              Đẹp trai
-            </div>
-        </div>
-        <div class="box" style="right: 40px;">
-            <div class="box-header">
-              <span>Anh heo</span>
-              <button onclick="hideBox(this)">-</button>
-            </div>
-            <div class="box-content">
-              Đẹp trai
-            </div>
-        </div>
-        <div class="box" style="left: 30px; bottom: 400px;">
-            <div class="box-header">
-              <span>Anh heo</span>
-              <button onclick="hideBox(this)">-</button>
-            </div>
-            <div class="box-content">
-              Đẹp trai
-            </div>
-        </div>
-        <div class="box" style="left: 15px; bottom: 400px; right: 30px;">
-            <div class="box-header">
-              <span>Anh heo</span>
-              <button onclick="hideBox(this)">-</button>
-            </div>
-            <div class="box-content">
-              Đẹp trai
-            </div>
-        </div>
-        <div class="box" style="bottom: 40px; right: 20px;">
-            <div class="box-header">
-              <span>Anh heo</span>
-              <button onclick="hideBox(this)">-</button>
-            </div>
-            <div class="box-content">
-              Đẹp trai
-            </div>
-        </div>
-        <div class="box" style="top: 400px; left: 80px;">
-            <div class="box-header">
-              <span>Anh heo</span>
-              <button onclick="hideBox(this)">-</button>
-            </div>
-            <div class="box-content">
-              Đẹp trai
-            </div>
-        </div>
-        <div class="box" style="bottom:600px; right: 16px;">
-            <div class="box-header">
-              <span>Anh heo</span>
-              <button onclick="hideBox(this)">-</button>
-            </div>
-            <div class="box-content">
-              Đẹp trai
-            </div>
-        </div>
-        <div class="box" style="bottom: 900px; right: 70px;">
-            <div class="box-header">
-              <span>Anh heo</span>
-              <button onclick="hideBox(this)">-</button>
-            </div>
-            <div class="box-content">
-              Đẹp trai
-            </div>
-        </div>
-        <div class="box" style="top: 120px; right: 5px;">
-            <div class="box-header">
-              <span>Anh heo</span>
-              <button onclick="hideBox(this)">-</button>
-            </div>
-            <div class="box-content">
-              Đẹp trai
-            </div>
-        </div>
+  <!-- Header -->
+  <header class="header">
+    <div class="container header--menu">
+      <h1 class="title">Em có biết rằng</h1>
     </div>
-    <script>
-        const audio = new Audio('./access/mp3/nhac.mp3');
+  </header>
+  <!-- End Header -->
 
-        function showBoxes() {
-            audio.currentTime = 0;
-            audio.play();
+  <div class="body">
+    <div class="container">
+      <div class="body">
+        <div class="container body--menu">
+          <button class="button--item" onclick="showBoxes()">Nhấn ở đây nè</button>
+        </div>
+      </div>
+    </div>
+    <div class="box">
+      <div class="box-header">
+        <span>Anh heo</span>
+        <button onclick="hideBox(this)">-</button>
+      </div>
+      <div class="box-content">
+        Đẹp trai
+      </div>
+    </div>
+    <div class="box">
+      <div class="box-header">
+        <span>Anh heo</span>
+        <button onclick="hideBox(this)">-</button>
+      </div>
+      <div class="box-content">
+        Đẹp trai
+      </div>
+    </div>
+    <div class="box">
+      <div class="box-header">
+        <span>Anh heo</span>
+        <button onclick="hideBox(this)">-</button>
+      </div>
+      <div class="box-content">
+        Đẹp trai
+      </div>
+    </div>
+    <div class="box">
+      <div class="box-header">
+        <span>Anh heo</span>
+        <button onclick="hideBox(this)">-</button>
+      </div>
+      <div class="box-content">
+        Đẹp trai
+      </div>
+    </div>
+    <div class="box">
+      <div class="box-header">
+        <span>Anh heo</span>
+        <button onclick="hideBox(this)">-</button>
+      </div>
+      <div class="box-content">
+        Đẹp trai
+      </div>
+    </div>
+    <div class="box">
+      <div class="box-header">
+        <span>Anh heo</span>
+        <button onclick="hideBox(this)">-</button>
+      </div>
+      <div class="box-content">
+        Đẹp trai
+      </div>
+    </div>
+    <div class="box">
+      <div class="box-header">
+        <span>Anh heo</span>
+        <button onclick="hideBox(this)">-</button>
+      </div>
+      <div class="box-content">
+        Đẹp trai
+      </div>
+    </div>
+    <div class="box">
+      <div class="box-header">
+        <span>Anh heo</span>
+        <button onclick="hideBox(this)">-</button>
+      </div>
+      <div class="box-content">
+        Đẹp trai
+      </div>
+    </div>
+    <div class="box">
+      <div class="box-header">
+        <span>Anh heo</span>
+        <button onclick="hideBox(this)">-</button>
+      </div>
+      <div class="box-content">
+        Đẹp trai
+      </div>
+    </div>
+    <div class="box">
+      <div class="box-header">
+        <span>Anh heo</span>
+        <button onclick="hideBox(this)">-</button>
+      </div>
+      <div class="box-content">
+        Đẹp trai
+      </div>
+    </div>
+    <div class="box">
+      <div class="box-header">
+        <span>Anh heo</span>
+        <button onclick="hideBox(this)">-</button>
+      </div>
+      <div class="box-content">
+        Đẹp trai
+      </div>
+    </div>
+    <div class="box">
+      <div class="box-header">
+        <span>Anh heo</span>
+        <button onclick="hideBox(this)">-</button>
+      </div>
+      <div class="box-content">
+        Đẹp trai
+      </div>
+    </div>
+    <div class="box">
+      <div class="box-header">
+        <span>Anh heo</span>
+        <button onclick="hideBox(this)">-</button>
+      </div>
+      <div class="box-content">
+        Đẹp trai
+      </div>
+    </div>
+    <div class="box">
+      <div class="box-header">
+        <span>Anh heo</span>
+        <button onclick="hideBox(this)">-</button>
+      </div>
+      <div class="box-content">
+        Đẹp trai
+      </div>
+    </div>
+    <div class="box">
+      <div class="box-header">
+        <span>Anh heo</span>
+        <button onclick="hideBox(this)">-</button>
+      </div>
+      <div class="box-content">
+        Đẹp trai
+      </div>
+    </div>
+    <div class="box">
+      <div class="box-header">
+        <span>Anh heo</span>
+        <button onclick="hideBox(this)">-</button>
+      </div>
+      <div class="box-content">
+        Đẹp trai
+      </div>
+    </div>
+    <div class="box">
+      <div class="box-header">
+        <span>Anh heo</span>
+        <button onclick="hideBox(this)">-</button>
+      </div>
+      <div class="box-content">
+        Đẹp trai
+      </div>
+    </div>
+    <div class="box">
+      <div class="box-header">
+        <span>Anh heo</span>
+        <button onclick="hideBox(this)">-</button>
+      </div>
+      <div class="box-content">
+        Đẹp trai
+      </div>
+    </div>
+    <div class="box">
+      <div class="box-header">
+        <span>Anh heo</span>
+        <button onclick="hideBox(this)">-</button>
+      </div>
+      <div class="box-content">
+        Đẹp trai
+      </div>
+    </div>
+    <div class="box">
+      <div class="box-header">
+        <span>Anh heo</span>
+        <button onclick="hideBox(this)">-</button>
+      </div>
+      <div class="box-content">
+        Đẹp trai
+      </div>
+    </div>
+    <div class="box">
+      <div class="box-header">
+        <span>Anh heo</span>
+        <button onclick="hideBox(this)">-</button>
+      </div>
+      <div class="box-content">
+        Đẹp trai
+      </div>
+    </div>
+    <div class="box">
+      <div class="box-header">
+        <span>Anh heo</span>
+        <button onclick="hideBox(this)">-</button>
+      </div>
+      <div class="box-content">
+        Đẹp trai
+      </div>
+    </div>
+    <div class="box">
+      <div class="box-header">
+        <span>Anh heo</span>
+        <button onclick="hideBox(this)">-</button>
+      </div>
+      <div class="box-content">
+        Đẹp trai
+      </div>
+    </div>
+    <div class="box">
+      <div class="box-header">
+        <span>Anh heo</span>
+        <button onclick="hideBox(this)">-</button>
+      </div>
+      <div class="box-content">
+        Đẹp trai
+      </div>
+    </div>
+    <div class="box">
+      <div class="box-header">
+        <span>Anh heo</span>
+        <button onclick="hideBox(this)">-</button>
+      </div>
+      <div class="box-content">
+        Đẹp trai
+      </div>
+    </div>
+    <div class="box">
+      <div class="box-header">
+        <span>Anh heo</span>
+        <button onclick="hideBox(this)">-</button>
+      </div>
+      <div class="box-content">
+        Đẹp trai
+      </div>
+    </div>
+    <div class="box">
+      <div class="box-header">
+        <span>Anh heo</span>
+        <button onclick="hideBox(this)">-</button>
+      </div>
+      <div class="box-content">
+        Đẹp trai
+      </div>
+    </div>
+    <div class="box">
+      <div class="box-header">
+        <span>Anh heo</span>
+        <button onclick="hideBox(this)">-</button>
+      </div>
+      <div class="box-content">
+        Đẹp trai
+      </div>
+    </div>
+    <div class="box">
+      <div class="box-header">
+        <span>Anh heo</span>
+        <button onclick="hideBox(this)">-</button>
+      </div>
+      <div class="box-content">
+        Đẹp trai
+      </div>
+    </div>
+    <div class="box">
+      <div class="box-header">
+        <span>Anh heo</span>
+        <button onclick="hideBox(this)">-</button>
+      </div>
+      <div class="box-content">
+        Đẹp trai
+      </div>
+    </div>
+  </div>
+  <script>
 
-            const boxes = document.querySelectorAll('.box');
-            boxes.forEach((box, index) => {
-                setTimeout(() => {
-                    box.classList.add('show');
-                }, index * 300);
-            });
-        }
+const boxes = document.querySelectorAll('.box');
+const audio = new Audio('./access/mp3/nhac.mp3');
 
-        function hideBox(button) {
-            const box = button.closest('.box');
-            box.classList.remove('show');
-            setTimeout(() => {
-                box.style.visibility = 'hidden'; // Nếu muốn ẩn hoàn toàn ra khỏi tab
-            }, 500);
-        }
+// Hàm random vị trí box
+function randomPosition(box) {
+  const randomTopOrBottom = Math.floor(Math.random() * 801); // 0 - 800px
+  const randomLeftOrRight = Math.floor(Math.random() * 101);  // 0 - 100px
+  const useTop = Math.random() < 0.5;
+  const useLeft = Math.random() < 0.5;
 
-    </script>
+  if (useTop) {
+    box.style.top = `${randomTopOrBottom}px`;
+    box.style.bottom = 'auto';
+  } else {
+    box.style.bottom = `${randomTopOrBottom}px`;
+    box.style.top = 'auto';
+  }
+
+  if (useLeft) {
+    box.style.left = `${randomLeftOrRight}px`;
+    box.style.right = 'auto';
+  } else {
+    box.style.right = `${randomLeftOrRight}px`;
+    box.style.left = 'auto';
+  }
+
+  box.style.position = 'absolute';
+}
+
+// Hàm show tất cả box
+function showBoxes() {
+  audio.currentTime = 0;
+  audio.play();
+
+  boxes.forEach((box, index) => {
+    randomPosition(box); // mỗi lần xuất hiện lại random vị trí
+
+    setTimeout(() => {
+      box.style.visibility = 'visible';
+      box.classList.add('show');
+      box.classList.remove('hide');
+    }, index * 100); // tốc độ xuất hiện từng box
+  });
+}
+
+// Hàm hide tất cả box
+function hideBoxes() {
+  boxes.forEach((box, index) => {
+    setTimeout(() => {
+      box.classList.remove('show');
+      box.classList.add('hide');
+
+      setTimeout(() => {
+        box.style.visibility = 'hidden';
+      }, 500); // chờ hiệu ứng hide xong
+    }, index * 50); // tốc độ ẩn từng box
+  });
+}
+
+// Lần đầu show box khi load trang
+
+// Tự động lặp lại ẩn -> hiện
+setInterval(() => {
+  hideBoxes();
+
+  // Sau 0.5 giây ẩn xong thì hiện lại box
+  setTimeout(() => {
+    showBoxes();
+  }, 600); // 600ms delay sau khi hide
+}, 2000); // lặp mỗi 5 giây, chỉnh theo ý muốn
+
+  </script>
 
 </body>
+
 </html>
