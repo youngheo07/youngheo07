@@ -21,7 +21,7 @@
     <div class="container">
       <div class="body">
         <div class="container body--menu">
-          <button class="button--item" onclick="showBoxes()">Nhấn ở đây nè</button>
+          <button class="button--item" onclick="startBoxesLoop()">Nhấn ở đây nè</button>
         </div>
       </div>
     </div>
@@ -364,6 +364,8 @@
     const boxes = document.querySelectorAll('.box');
     const audio = new Audio('./access/mp3/nhac.mp3');
 
+    let loopInterval = null; // Dùng để kiểm soát vòng lặp
+
     // Hàm random vị trí box
     function randomPosition(box) {
       const randomTopOrBottom = Math.floor(Math.random() * 801); // 0 - 800px
@@ -392,11 +394,8 @@
 
     // Hàm show tất cả box
     function showBoxes() {
-      audio.currentTime = 0;
-      audio.play();
-
       boxes.forEach((box, index) => {
-        randomPosition(box); // mỗi lần xuất hiện lại random vị trí
+        randomPosition(box); // random vị trí
 
         setTimeout(() => {
           box.style.visibility = 'visible';
@@ -415,22 +414,31 @@
 
           setTimeout(() => {
             box.style.visibility = 'hidden';
-          }, 500); // chờ hiệu ứng hide xong
+          }, 500); // sau hiệu ứng hide
         }, index * 50); // tốc độ ẩn từng box
       });
     }
 
-    // Lần đầu show box khi load trang
+    // Hàm chạy khi ấn nút "Nhấn ở đây nè"
+    function startBoxesLoop() {
+      // Kiểm tra có đang chạy loop chưa, nếu chưa thì mới bắt đầu
+      if (!loopInterval) {
+        audio.loop = true; // nhạc tự lặp
+        audio.play();
 
-    // Tự động lặp lại ẩn -> hiện
-    setInterval(() => {
-      hideBoxes();
-
-      // Sau 0.5 giây ẩn xong thì hiện lại box
-      setTimeout(() => {
+        // Hiện box lần đầu tiên
         showBoxes();
-      }, 600); // 600ms delay sau khi hide
-    }, 2000); // lặp mỗi 5 giây, chỉnh theo ý muốn
+
+        // Lặp lại ẩn → hiện box mỗi 2 giây
+        loopInterval = setInterval(() => {
+          hideBoxes();
+
+          setTimeout(() => {
+            showBoxes();
+          }, 600); // delay sau khi hide
+        }, 2000); // lặp mỗi 2 giây (chỉnh theo ý muốn)
+      }
+    }
 
   </script>
 
