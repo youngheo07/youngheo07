@@ -13,6 +13,7 @@
     <header class="header">
         <div class="container header--menu">
             <h1 class="title">Em có biết rằng</h1>
+        </div>
     </header>
     <!-- End Header -->
 
@@ -193,12 +194,12 @@
         </audio>
 
         function showBoxes() {
-          const audio = document.getElementById('myAudio');
-          if (audio.paused) {
-              audio.currentTime = 0;
-              audio.play();
-          }
-          audio.play();
+            const audio = document.getElementById('myAudio');
+            if (audio.paused) {
+                audio.currentTime = 0;
+                audio.play();
+            }
+
             const boxes = document.querySelectorAll('.box');
             boxes.forEach((box, index) => {
                 setTimeout(() => {
