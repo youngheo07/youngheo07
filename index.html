@@ -188,11 +188,16 @@
         </div>
     </div>
     <script>
-        const audio = new Audio('youngheo07/access/mp3/nhac.mp3'); // Đường dẫn file nhạc của bạn
+        <audio id="myAudio">
+            <source src="/project-anh-heo/access/mp3/nhac.mp3" type="audio/mpeg">
+        </audio>
 
         function showBoxes() {
-            audio.currentTime = 0;
-            audio.play();
+                const audio = document.getElementById('myAudio');
+          if (audio.paused) {
+              audio.currentTime = 0;
+              audio.play();
+          }
 
             const boxes = document.querySelectorAll('.box');
             boxes.forEach((box, index) => {
