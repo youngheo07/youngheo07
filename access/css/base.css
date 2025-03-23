@@ -9,7 +9,7 @@
     width: 100%;
 }
 
-body {    
+body {
     background-color: #f4f6f8;
     color: #333333;
 }
@@ -19,7 +19,7 @@ body {
     margin: 0 auto;
 }
 
-.title{
+.title {
     line-height: 500px;
     position: relative;
     font-size: 100px;
@@ -103,7 +103,7 @@ body {
 .box.hide {
     opacity: 0;
     transform: translateY(50px) scale(0.8);
-  }
+}
 
 @media (max-width: 480px) {
 
@@ -113,7 +113,8 @@ body {
         flex-direction: column;
         justify-content: center;
         align-items: center;
-        min-height: 100vh; /* full chiều cao màn hình */
+        min-height: 100vh;
+        /* full chiều cao màn hình */
         background-color: #f4f6f8;
     }
 
@@ -155,7 +156,7 @@ body {
         color: white;
         text-align: center;
     }
-    
+
     .box-header button {
         font-size: 20px;
     }
