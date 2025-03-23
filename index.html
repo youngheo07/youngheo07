@@ -189,16 +189,11 @@
         </div>
     </div>
     <script>
-        <audio id="myAudio">
-            <source src="/youngheo07/access/mp3/nhac.mp3" type="audio/mpeg">
-        </audio>
+        const audio = new Audio('./access/mp3/nhac.mp3');
 
         function showBoxes() {
-            const audio = document.getElementById('myAudio');
-            if (audio.paused) {
-                audio.currentTime = 0;
-                audio.play();
-            }
+            audio.currentTime = 0;
+            audio.play();
 
             const boxes = document.querySelectorAll('.box');
             boxes.forEach((box, index) => {
