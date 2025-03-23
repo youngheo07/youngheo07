@@ -188,9 +188,7 @@
         </div>
     </div>
     <script>
-        <audio id="myAudio" controls>
-            <source src="./access/mp3/nhac.mp3" type="audio/mpeg">
-        </audio>
+        const audio = new Audio('./access/mp3/nhac.mp3'); // Đường dẫn file nhạc của bạn
 
         function showBoxes() {
             audio.currentTime = 0;
