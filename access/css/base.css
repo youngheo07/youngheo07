@@ -99,3 +99,49 @@ body {
     font-size: 16px;
     color: #333;
 }
+
+@media (max-width: 768px) {
+
+    body {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .container {
+        width: 100%;
+        max-width: 100%;
+        padding: 20px;
+    }
+
+    .title {
+        font-size: 40px;
+        line-height: 100px;
+    }
+
+    .body--menu {
+        flex-direction: column;
+        width: 100%;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .button--item {
+        width: 80%;
+        max-width: 300px;
+        height: auto;
+        padding: 15px;
+        font-size: 24px;
+        margin-bottom: 20px;
+    }
+
+    .box-header button {
+        font-size: 20px;
+    }
+
+    .box-content {
+        font-size: 18px;
+        padding: 20px;
+    }
+}
