@@ -295,79 +295,142 @@
         Đẹp trai
       </div>
     </div>
+    <div class="box">
+      <div class="box-header">
+        <span>Anh heo</span>
+        <button onclick="hideBox(this)">-</button>
+      </div>
+      <div class="box-content">
+        Đẹp trai
+      </div>
+    </div>
+    <div class="box">
+      <div class="box-header">
+        <span>Anh heo</span>
+        <button onclick="hideBox(this)">-</button>
+      </div>
+      <div class="box-content">
+        Đẹp trai
+      </div>
+    </div>
+    <div class="box">
+      <div class="box-header">
+        <span>Anh heo</span>
+        <button onclick="hideBox(this)">-</button>
+      </div>
+      <div class="box-content">
+        Đẹp trai
+      </div>
+    </div>
+    <div class="box">
+      <div class="box-header">
+        <span>Anh heo</span>
+        <button onclick="hideBox(this)">-</button>
+      </div>
+      <div class="box-content">
+        Đẹp trai
+      </div>
+    </div>
+    <div class="box">
+      <div class="box-header">
+        <span>Anh heo</span>
+        <button onclick="hideBox(this)">-</button>
+      </div>
+      <div class="box-content">
+        Đẹp trai
+      </div>
+    </div>
+    <div class="box">
+      <div class="box-header">
+        <span>Anh heo</span>
+        <button onclick="hideBox(this)">-</button>
+      </div>
+      <div class="box-content">
+        Đẹp trai
+      </div>
+    </div>
+    <div class="box">
+      <div class="box-header">
+        <span>Anh heo</span>
+        <button onclick="hideBox(this)">-</button>
+      </div>
+      <div class="box-content">
+        Đẹp trai
+      </div>
+    </div>
   </div>
   <script>
 
-const boxes = document.querySelectorAll('.box');
-const audio = new Audio('./access/mp3/nhac.mp3');
+    const boxes = document.querySelectorAll('.box');
+    const audio = new Audio('./access/mp3/nhac.mp3');
 
-// Hàm random vị trí box
-function randomPosition(box) {
-  const randomTopOrBottom = Math.floor(Math.random() * 801); // 0 - 800px
-  const randomLeftOrRight = Math.floor(Math.random() * 101);  // 0 - 100px
-  const useTop = Math.random() < 0.5;
-  const useLeft = Math.random() < 0.5;
+    // Hàm random vị trí box
+    function randomPosition(box) {
+      const randomTopOrBottom = Math.floor(Math.random() * 801); // 0 - 800px
+      const randomLeftOrRight = Math.floor(Math.random() * 101);  // 0 - 100px
+      const useTop = Math.random() < 0.5;
+      const useLeft = Math.random() < 0.5;
 
-  if (useTop) {
-    box.style.top = `${randomTopOrBottom}px`;
-    box.style.bottom = 'auto';
-  } else {
-    box.style.bottom = `${randomTopOrBottom}px`;
-    box.style.top = 'auto';
-  }
+      if (useTop) {
+        box.style.top = `${randomTopOrBottom}px`;
+        box.style.bottom = 'auto';
+      } else {
+        box.style.bottom = `${randomTopOrBottom}px`;
+        box.style.top = 'auto';
+      }
 
-  if (useLeft) {
-    box.style.left = `${randomLeftOrRight}px`;
-    box.style.right = 'auto';
-  } else {
-    box.style.right = `${randomLeftOrRight}px`;
-    box.style.left = 'auto';
-  }
+      if (useLeft) {
+        box.style.left = `${randomLeftOrRight}px`;
+        box.style.right = 'auto';
+      } else {
+        box.style.right = `${randomLeftOrRight}px`;
+        box.style.left = 'auto';
+      }
 
-  box.style.position = 'absolute';
-}
+      box.style.position = 'absolute';
+    }
 
-// Hàm show tất cả box
-function showBoxes() {
-  audio.currentTime = 0;
-  audio.play();
+    // Hàm show tất cả box
+    function showBoxes() {
+      audio.currentTime = 0;
+      audio.play();
 
-  boxes.forEach((box, index) => {
-    randomPosition(box); // mỗi lần xuất hiện lại random vị trí
+      boxes.forEach((box, index) => {
+        randomPosition(box); // mỗi lần xuất hiện lại random vị trí
 
-    setTimeout(() => {
-      box.style.visibility = 'visible';
-      box.classList.add('show');
-      box.classList.remove('hide');
-    }, index * 100); // tốc độ xuất hiện từng box
-  });
-}
+        setTimeout(() => {
+          box.style.visibility = 'visible';
+          box.classList.add('show');
+          box.classList.remove('hide');
+        }, index * 100); // tốc độ xuất hiện từng box
+      });
+    }
 
-// Hàm hide tất cả box
-function hideBoxes() {
-  boxes.forEach((box, index) => {
-    setTimeout(() => {
-      box.classList.remove('show');
-      box.classList.add('hide');
+    // Hàm hide tất cả box
+    function hideBoxes() {
+      boxes.forEach((box, index) => {
+        setTimeout(() => {
+          box.classList.remove('show');
+          box.classList.add('hide');
 
+          setTimeout(() => {
+            box.style.visibility = 'hidden';
+          }, 500); // chờ hiệu ứng hide xong
+        }, index * 50); // tốc độ ẩn từng box
+      });
+    }
+
+    // Lần đầu show box khi load trang
+
+    // Tự động lặp lại ẩn -> hiện
+    setInterval(() => {
+      hideBoxes();
+
+      // Sau 0.5 giây ẩn xong thì hiện lại box
       setTimeout(() => {
-        box.style.visibility = 'hidden';
-      }, 500); // chờ hiệu ứng hide xong
-    }, index * 50); // tốc độ ẩn từng box
-  });
-}
-
-// Lần đầu show box khi load trang
-
-// Tự động lặp lại ẩn -> hiện
-setInterval(() => {
-  hideBoxes();
-
-  // Sau 0.5 giây ẩn xong thì hiện lại box
-  setTimeout(() => {
-    showBoxes();
-  }, 600); // 600ms delay sau khi hide
-}, 2000); // lặp mỗi 5 giây, chỉnh theo ý muốn
+        showBoxes();
+      }, 600); // 600ms delay sau khi hide
+    }, 2000); // lặp mỗi 5 giây, chỉnh theo ý muốn
 
   </script>
 
