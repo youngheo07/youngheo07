@@ -1,0 +1,95 @@
+<doctyepe hmtl></doctyepe>
+<head>
+<meta charset="UTF-8">
+<meta name="viewport"content="width=device=width, inritial-scale="1.0">
+<title>20-10 nhé</title>
+<link rel=""stylesheet"href="./access/css/base .css">
+</head>
+<body>
+<!--header -->
+<header class="header">
+    <div class="container header--menu">
+     <h1 class=title">nhìn ở phía dưới</h1>
+    </div>
+</header>
+<!-- end header -->
+ <div class="body">
+<div class="contaiter">
+<div class="body">
+    <div class="container body--menu">
+        <button class="button--item"onclick="startBoxesLoop()">here here</button>"
+    </div>
+  </div>
+</div>
+</div>
+<div class="box"></div>   
+<div class="box-header">       
+        <span ></span> chúc tất cả
+        <button onclockolclick="hideBox(this)">-</button>
+<div class ="box-body"> trừ vất vả nhé</div>
+</div>
+<script>
+    const boxes = document.querySelectorAll('.box');
+    const audio = new Audio('./access/audio/20-10.mp3');
+    let loopInterval = null; // dùng để kiểm soát vòng lặp
+    // Hàm random vị trí các hộp
+    function randomPosition(box) {
+        const randomToporBottom = Math.floor(Math.random() * 801); // Giá trị từ 0 đến 800px
+        const randomLeftorRight = Math.floor(Math.random() * 101); // Giá trị từ 0 đến 100px
+        const useTop = Math.random() < 0.5; 
+        const useLeft = Math.random() < 0.5;
+        if (useTop) {
+            box.style.top = `${randomToporBottom}px`;
+            box.style.bottom = 'auto';
+            } else {
+            box.style.bottom = `${randomToporBottom}px`;    
+            box.style.top = 'auto';
+            }
+         if (useLeft) {
+            box.style.left = `${randomLeftorRight}px`;
+            box.style.right = 'auto';
+            } else {
+            box.style.right = `${randomLeftorRight}px`;    
+            box.style.left = 'auto';
+            }
+            box.style.position = 'absolute';
+    }
+    // Hàm show tất cả box
+    function showAllBoxes() {
+        boxes.forEach(box, index => {
+            randomPosition(box); // random vị trí
+            setTimeout(() => {
+                box.style.visility = 'visible'; 
+                box.classList.add('show');
+                box.classList.remove('hide');
+            }, index * 40); // tốc độ xuất hiện từng box    
+        });        
+    }
+    // Hàm hide tất cả box<div class="body">
+        function hideAllBoxes() {
+            boxes.forEach((box, index) => {
+                box.classList.add('hide');
+                setTimeout(() => {
+                    box.style.visility = 'hidden';
+            }, index * 40); // tốc độ ẩn từng box}
+        });
+        }    
+        // Hàm chạy khi ấn nút "here here"
+        function startBoxesLoop() {
+        // Kiểm tra có đang chạy loop chưa, nếu chưa thì bắt đầu
+        if (!loopInterval)
+        audio.loop = true; // nhạc tự lập lại
+        audio.play();
+        // Hiện box lần đầu tiên
+        showBoxes();
+        // Lắp lại ẩn -> hiện box mỗi 2 giây
+        loopInterval = setInterval(() => {
+            hideBoxes();
+            setTimeout(() => {
+                showBoxes();
+            }, 600); // thời gian chờ trước khi hiện lại box
+        }, 2000); // lặp lại mỗi 2 giây (chỉnh theo ý muốn)
+    }
+</script>
+</body>
+</hmtl>
